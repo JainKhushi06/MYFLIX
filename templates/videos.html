@@ -8,11 +8,9 @@
 
     <title>Videos</title>
 
-    <link rel="stylesheet"
-    href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="style.css">
 
 </head>
-<script src="{{ url_for('static', filename='script.js') }}"></script>
 <body>
 
     <!-- NAVBAR -->
@@ -27,7 +25,7 @@
 
         <ul>
 
-            <li><a href="/">Home</a></li>
+            <li><a href="index.html">Home</a></li>
 
         </ul>
 
@@ -47,7 +45,7 @@
 
                 <video class="movie-video" onclick="openFullscreen(this)">
 
-                    <source src="{{ url_for('static', filename='videos/SEM 1.mp4') }}" type="video/mp4">
+                    <source src="https://res.cloudinary.com/dnoy1wp3j/video/upload/v1781612874/SEM_1_qbu7ti.mp4" type="video/mp4">
 
                 </video>
 
@@ -61,7 +59,7 @@
 
                 <video class="movie-video" onclick="openFullscreen(this)">
 
-                    <source src="{{ url_for('static', filename='videos/SEM 2.mp4') }}" type="video/mp4">
+                    <source src="https://res.cloudinary.com/dnoy1wp3j/video/upload/v1781612863/SEM_2_vvjker.mp4" type="video/mp4">
 
                 </video>
 
@@ -73,5 +71,6 @@
 
     </section>
 
+<script src="script.js"></script>
 </body>
 </html>
