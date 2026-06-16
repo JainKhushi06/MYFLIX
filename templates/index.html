@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyFlix</title>
 
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
@@ -16,7 +15,7 @@
 
         <video id="intro-video" playsinline>
 
-            <source src="intro.mp4" type="video/mp4">
+            <source src="{{ url_for('static', filename='intro.mp4') }}" type="video/mp4">
 
         </video>
 
@@ -38,8 +37,7 @@
             <ul>
 
                 <li>Home</li>
-                <li><a href="videos.html">Videos</a></li>
-
+                <li><a href="/videos">Videos</a></li>
             </ul>
 
         </nav>
@@ -96,6 +94,6 @@
 
     </div>
 
-<script src="script.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
