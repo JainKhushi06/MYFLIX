@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFlix</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+</head>
+
+<body>
+
+    <!-- INTRO VIDEO -->
+    <div id="intro">
+
+        <video id="intro-video" playsinline>
+
+            <source src="{{ url_for('static', filename='intro.mp4') }}" type="video/mp4">
+
+        </video>
+
+    </div>
+    <!-- MAIN WEBSITE -->
+<!-- MAIN WEBSITE -->
+
+    <div id="main-content">
+
+        <!-- NAVBAR -->
+
+        <nav>
+
+            <div class="logo">
+
+                <h1>MYFLIX</h1>
+
+            </div>
+
+            <ul>
+
+                <li>Home</li>
+                <li><a href="/videos">Videos</a></li>
+
+            </ul>
+
+        </nav>
+
+        <!-- HERO SECTION -->
+
+        <section class="hero-section">
+
+            <h1>What do you want to watch?</h1>
+
+            <p>Unlimited Movies, Shows and Entertainment</p>
+
+        </section>
+
+        <!-- YOUR VIDEOS -->
+
+        <section class="videos-section">
+
+            <h2>Trending Videos</h2>
+
+            <div class="video-row">
+
+                <!-- SEMESTER 1 VIDEO -->
+
+                <div class="video-card">
+
+                    <video class="movie-video"
+                    onclick="openFullscreen(this)">
+
+                        <source src="{{ url_for('static', filename='videos/SEM 1.mp4') }}" type="video/mp4">
+
+                    </video>
+
+                    <h3>Semester 1</h3>
+
+                </div>
+                <!-- SEMESTER 2 VIDEO -->
+
+                <div class="video-card">
+
+                    <video class="movie-video"
+                    onclick="openFullscreen(this)">
+
+                        <source src="{{ url_for('static', filename='videos/SEM 2.mp4') }}" type="video/mp4">
+
+                    </video>
+
+                    <h3>Semester 2</h3>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

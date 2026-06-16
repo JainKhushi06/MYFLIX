@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Videos</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+
+            <h1>MYFLIX</h1>
+
+        </div>
+
+        <ul>
+
+            <li><a href="/">Home</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- VIDEOS PAGE -->
+
+    <section class="videos-section">
+
+        <h1 style="margin-bottom:40px;">My Semester Videos</h1>
+
+        <div class="video-row">
+
+            <!-- SEMESTER 1 -->
+
+            <div class="video-card">
+
+                <video class="movie-video" onclick="openFullscreen(this)">
+
+                    <source src="{{ url_for('static', filename='videos/SEM 1.mp4') }}" type="video/mp4">
+
+                </video>
+
+                <h3>Semester 1</h3>
+
+            </div>
+
+            <!-- SEMESTER 2 -->
+
+            <div class="video-card">
+
+                <video class="movie-video" onclick="openFullscreen(this)">
+
+                    <source src="{{ url_for('static', filename='videos/SEM 2.mp4') }}" type="video/mp4">
+
+                </video>
+
+                <h3>Semester 2</h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
