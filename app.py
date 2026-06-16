@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import os
 
 app = Flask(__name__)
 
@@ -9,10 +10,6 @@ def home():
 @app.route("/videos")
 def videos():
     return render_template("videos.html")
-
-app.run()
-
-import os
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
